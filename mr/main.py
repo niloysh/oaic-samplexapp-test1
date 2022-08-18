@@ -41,7 +41,7 @@ from numpy import zeros, newaxis
 
 from mr import populate
 from populate import INSERTDATA
-from mr.db import DATABASE, DUMMY
+from mr.db import DATABASE
 #import mr.populate as populate
 
 from tensorflow import keras
