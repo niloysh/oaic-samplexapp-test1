@@ -11,7 +11,7 @@ import datetime
 
 
 class DATABASE(object):
-    print('///////////enter class DATABASE(object)////////////////////')
+    #print('///////////enter class DATABASE(object)////////////////////')
     r""" DATABASE takes an input as database name. It creates a client connection
       to influxDB and It reads/ writes UE data for a given dabtabase and a measurement.
     Parameters
@@ -35,13 +35,13 @@ class DATABASE(object):
     #host = 'localhost'
     #def __init__(self, dbname, user='root', password='root', host, port='8086'):
     def __init__(self, dbname, host=host, port='8086'):    
-        print('///////enter def __init__ in class DATABASE////////////////')
+        #print('///////enter def __init__ in class DATABASE////////////////')
         self.data = None
         self.client = DataFrameClient(host, port, dbname)
         print('self.client=', self.client)
 
     def read_data(self, meas, limit=100):
-        print('///////enter def read_data(self, meas, limit=100): in class DATABASE///////////')
+        #print('///////enter def read_data(self, meas, limit=100): in class DATABASE///////////')
         """Read data method for a given measurement and limit
         Parameters
         ----------
@@ -51,7 +51,7 @@ class DATABASE(object):
         #dbname = 'RANData'  ///error: not defined
         #print('dbname=', db) /// error: not defined
         
-        print('meas=', meas)
+        #print('meas=', meas)
         #print('limit=', limit)
         #print('str(limit)=', str(limit))
         
@@ -85,7 +85,7 @@ class DATABASE(object):
             print('Data not found for ' + meas + ' vnf')
 
     def write_action(self, df, meas='actions'):
-        print('///////enter def write_lp_prediction(self, df, meas=LP): in class DATABASE///////////')
+        #print('///////enter def write_lp_prediction(self, df, meas=LP): in class DATABASE///////////')
         """Write data method for a given measurement
         Parameters
         ----------
@@ -139,13 +139,13 @@ class DATABASE(object):
 
 
 class Error(Exception):
-    print('////////enter class Error in db////////////////')
+    #print('////////enter class Error in db////////////////')
     """Base class for other exceptions"""
     pass
 
 
 class NoDataError(Error):
-    print('////////enter class NoDataError in db//////////////////')
+    #print('////////enter class NoDataError in db//////////////////')
     """Raised when there is no data available in database for a given measurment"""
     pass
 
