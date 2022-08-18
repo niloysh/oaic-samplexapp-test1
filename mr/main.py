@@ -94,7 +94,7 @@ class CellNotFound(BaseException):
     pass
 
 def post_init(self):
-    print('///////enter def post_init__/////////////////')
+    #print('///////enter def post_init__/////////////////')
     """
     Function that runs when xapp initialization is complete
     """
@@ -103,7 +103,7 @@ def post_init(self):
 
 
 def handle_config_change(self, config):
-    print('////////enter def handle_config_change//////////////')
+    #print('////////enter def handle_config_change//////////////')
     """
     Function that runs at start and on every configuration file change.
     """
@@ -111,7 +111,7 @@ def handle_config_change(self, config):
 
 
 def default_handler(self, summary, sbuf):
-    print('/////////enter def default_handler///////////////')
+    #print('/////////enter def default_handler///////////////')
     """
     Function that processes messages for which no handler is defined
     """
@@ -240,7 +240,7 @@ def RL():
                 #network_reward = self.utilities_scaled_float_mean
                 #print('state=state, reward, done = connectdb(actions)=', state)
                 state = np.array(state, dtype='float32')
-                #print('state = np.array(state)=', state)
+                print('state = np.array(state)=', state)
                 print('reward:connectdb(actions)=', reward)
                 #print('network_reward=', network_reward)
                 print('done=env.step(actions)=', done)
@@ -414,20 +414,20 @@ def RL():
 
 
 def connectdb(action):
-    print('////////////////////enter def connectdb///////////////////')
+    #print('////////////////////enter def connectdb///////////////////')
     # Create a connection to InfluxDB if thread=True, otherwise it will create a dummy data instance
     global db
     global RAN_data
     
-    print('//////enter else= populate.populate()////////////////')  
+    #print('//////enter else= populate.populate()////////////////')  
     populatedb(action)  # temporary method to populate db, it will be removed when data will be coming through KPIMON to influxDB
 
-    print('////came back from populate to connectdb.else:, db=DATABASE(RANData)///////')
+    #print('////came back from populate to connectdb.else:, db=DATABASE(RANData)///////')
     db = DATABASE('RANData')
-    print('////came back from db.DATABASE-init to connectdb.else///////')
+    #print('////came back from db.DATABASE-init to connectdb.else///////')
     print('db =  DATABASE(RANData) =', db) 
     db.read_data("RANMeas")
-    print('////came back from db.DATABASE-read-data to connectdb.else///////')
+    #print('////came back from db.DATABASE-read-data to connectdb.else///////')
     #print('db.read_data("RANMeas")=', db.read_data("RANMeas"))
     RAN_data = db.data.values.tolist()  # needs to be updated in future when live feed will be coming through KPIMON to influxDB
     print('RAN_data = db.data.values.tolist()=', RAN_data)
@@ -586,7 +586,7 @@ def populatedb(action):
 
 
 def mr_req_handler(self, summary, sbuf):
-    print('///////////enter def mr_req handler/////////////')
+    #print('///////////enter def mr_req handler/////////////')
     """
     This is the main handler for this xapp, which handles load prediction requests.
     This app fetches a set of data from SDL, and calls the predict method to perform
