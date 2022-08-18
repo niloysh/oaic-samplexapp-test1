@@ -1,12 +1,12 @@
 {
-        "xapp_name": "oaic_sample_xapp_test1",
+        "xapp_name": "oaic-samplexapp-test1",
         "version": "0.0.1",
         "containers": [
             {
-                "name": "oaic_sample_xapp_test1",
+                "name": "oaic-samplexapp-test1",
                 "image": {
                     "registry": "xApp-registry.local:5008",
-                    "name": "oaic_sample_xapp_test1",
+                    "name": "oaic-samplexapp-test1",
                     "tag": "0.0.1"
                 }
             }
