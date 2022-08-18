@@ -1,5 +1,5 @@
 ---
-project: 'oaic_sample_xapp_test1'
+project: 'oaic-sample-xapp-test1'
 project_creation_date: '2022-08-13'
 project_category: ''
 lifecycle_state: 'Incubation'
@@ -13,8 +13,8 @@ primary_contact: *oran_ric_app_lp_ptl
 issue_tracking:
     type: 
     url: 'https://github.com/openaicellular/oaic'
-    key: 'oaic_sample_xapp_test1'
+    key: 'oaic-samplexapp-test1'
 
 repositories:
-    - 'https://github.com/openaicellular/oaic_sample_xapp'
+    - 'https://github.com/openaicellular/oaic-samplexapp-test1'
 
