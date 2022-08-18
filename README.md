@@ -1,1 +1,2 @@
-# oaic_sample_xapp_test1
+# mr-xapp
+ric-xapp for test
