@@ -1,25 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-
-# ==================================================================================
-#       Copyright (c) 2020 China Mobile Technology (USA) Inc. Intellectual Property.
-#
-#   Licensed under the Apache License, Version 2.0 (the "License");
-#   you may not use this file except in compliance with the License.
-#   You may obtain a copy of the License at
-#
-#          http://www.apache.org/licenses/LICENSE-2.0
-#
-#   Unless required by applicable law or agreed to in writing, software
-#   distributed under the License is distributed on an "AS IS" BASIS,
-#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#   See the License for the specific language governing permissions and
-#   limitations under the License.
-# ==================================================================================
 
 
 import os
@@ -68,9 +46,6 @@ from mobile_env.core.entities import BaseStation, UserEquipment
 from mobile_env.scenarios.small import MComSmall
 
 
-# In[ ]:
-
-
 
 MComSmall.default_config()
 
@@ -89,7 +64,7 @@ print("Max Value of Action ->  {}".format(upper_bound))
 print("Min Value of Action ->  {}".format(lower_bound))
 # Configuration parameters for the whole setup
 gamma = 0.99  # Discount factor for past rewards
-max_steps_per_episode = 50
+max_steps_per_episode = 100
 eps = np.finfo(np.float32).eps.item()  # Smallest number such that 1.0 + eps != 1.0
 
 # num_inputs = 4
